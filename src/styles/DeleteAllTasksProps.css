@@ -1,0 +1,29 @@
+#deleteAllConfirmation {
+    background-color: rgba(155, 234, 247, 0.85);
+    width: 720px;
+    margin: 0 auto;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#deleteAllConfirmation button {
+    border-radius: 7px;
+    border: none;
+    height: 30px;
+    font-size: 16px;
+    margin: 10px;
+}
+
+#deleteAllConfirmation p {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+#deleteButton {
+    height: 30px;
+    margin-top: 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #f44336;;
+    color: white
+}
