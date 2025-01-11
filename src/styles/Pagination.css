@@ -1,0 +1,22 @@
+#pageNumRow {
+    background-color: rgba(155, 234, 247, 0.85);
+    margin: 0 auto;
+    padding-bottom: 10px;
+    width: 720px;
+}
+
+#pageNumRow button{
+    background-color: Transparent;
+    border: none;
+    font-size: 20px;
+}
+
+.flat-edges {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.round-edges {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
