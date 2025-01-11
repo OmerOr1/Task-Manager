@@ -1,50 +1,76 @@
-# React + TypeScript + Vite
+# Task Manager Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p> Welcome to My Task Manager! <br>
+This is a A simple and interactive Task Manager built with React.
+It allows users to Add, Edit, Delete, Reorder and Navigate tasks using pagination.
 
-Currently, two official plugins are available:
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Screen Shot
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+![Task Manager Interface](./src/assets/screenShot.PNG)
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Features
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Task Manager provides the following features:  
+1. **Add Tasks** – Enter a task name and click "Add Task" or press `Enter` to add it to the list.  
+2. **Edit Tasks** – Click on the edit button of a task to enable editing mode and modify its name directly.  
+3. **Delete Tasks** – Remove tasks individually or delete all tasks at once with a confirmation prompt.  
+4. **Reorder Tasks** – Move tasks up or down in the list to customize their order.  
+5. **Pagination** – Navigate between pages, with a maximum of 10 tasks displayed per page.  
+6. **Guidelines** – View helpful tips and instructions by toggling the guidelines section.  
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+---
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Components Overview
+
+This project is modularized into several reusable and functional components:
+
+1. **TaskManager**
+   - The central component that manages the application's state and coordinates all other components.
+   - Handles task creation, editing, deletion, pagination, and ordering logic.
+
+2. **AddTaskForm**
+   - A form allowing users to add new tasks.
+   - Includes validation to ensure task names are non-empty and within a character limit.
+   - Handles "Enter" key submissions for a smooth user experience.
+
+3. **TaskItem**
+   - Represents an individual task within the task list.
+   - Provides UI for task details (name, edit, delete, move up/down).
+   - Includes editing and deletion buttons that trigger respective actions in the `TaskList`.
+
+4. **TaskList**
+   - Displays a paginated list of tasks.
+   - Provides options for editing, deleting, and rearranging tasks.
+   - Passes interactions back to `TaskManager` for state updates.
+
+5. **Pagination**
+   - Controls navigation between task pages.
+
+6. **DeleteAllTasks**
+   - Provides a modal for confirming the deletion of all tasks.
+   - Includes cancel and confirm actions to ensure accidental deletions are avoided.
+
+7. **GuideLines**
+   - A static component that displays usage instructions or helpful tips for users.
+   - Serves as an introductory guide for understanding the interface.
+
+---
+
+## Libraries and Technologies
+
+This project is built with the following technologies:
+
+* JavaScript (React)
+* TypeScript
+* HTML
+* CSS
+* Node
+* Vite
+
+---
